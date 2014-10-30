@@ -9,6 +9,7 @@ namespace mvc;
 
 require_once '../../vendor/autoload.php';
 
+use mvc\Controllers;
 use mvc\tim\Barcelona;
 use mvc\tim\RealMadrid;
 use Symfony\Component\HttpFoundation\Request;

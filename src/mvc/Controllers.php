@@ -5,6 +5,8 @@
  * Date: 30.10.14
  * Time: 22:32
  */
+namespace mvc;
+
 class Controllers
 {
     function action_barcelona(){
