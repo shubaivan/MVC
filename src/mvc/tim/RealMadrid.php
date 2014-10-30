@@ -9,7 +9,7 @@
 namespace mvc\tim;
 
 
-class RealMadrid extends AbstractFootballTim
+class RealMadrid extends AbstractFootballTim implements LCInterface
 {
     function __construct($trainer, $stadium, $captain)
     {
@@ -17,7 +17,11 @@ class RealMadrid extends AbstractFootballTim
     }
     public function show()
     {
-        return sprintf('great %s play in %s his %s',$this->getCaptain(), $this->getStadium(), $this->getCaptain());
+        return sprintf('trainer %s stadium in %s captain %s',$this->getTrainer(), $this->getStadium(), $this->getCaptain());
+    }
+    public function LC()
+    {
+        return "Chempion";
     }
 
 }

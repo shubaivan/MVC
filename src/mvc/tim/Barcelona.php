@@ -6,7 +6,7 @@
  * Time: 22:34
  */
 
-namespace mvc\tim;
+namespace tim\barcelona;
 
 
 class Barcelona extends AbstractFootballTim
@@ -17,7 +17,7 @@ class Barcelona extends AbstractFootballTim
     }
     public function show()
     {
-        return sprintf('great %s play in %s his %s',$this->getCaptain(), $this->getStadium(), $this->getCaptain());
+        return sprintf('trainer %s stadium in %s captain %s',$this->getTrainer(), $this->getStadium(), $this->getCaptain());
     }
 
 }
