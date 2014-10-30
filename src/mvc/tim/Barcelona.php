@@ -6,7 +6,7 @@
  * Time: 22:34
  */
 
-namespace tim\barcelona;
+namespace mvc\tim;
 
 
 class Barcelona extends AbstractFootballTim
