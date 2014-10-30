@@ -9,7 +9,8 @@ namespace mvc;
 
 require_once '../../vendor/autoload.php';
 
-use mvc\tim;
+use mvc\tim\Barcelona;
+use mvc\tim\RealMadrid;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -19,11 +20,13 @@ echo $Barcelona->show().'<br>';
 
 $RealMadrid = new RealMadrid('Carlo Ancelotti','Santiago Bernabeu','Casillas');
 echo $RealMadrid->show().'<br>';
-echo ' Champions League'. $RealMadrid->LC().'<br>';
+echo ' Champions League - '. $RealMadrid->LC().'<br>';
+
+echo '<br>';
 
 $response = new Response();
 
-$response->setContent('<html><body><h1>Hello world!</h1></body></html>');
+$response->setContent('<html><body><h1>'.$RealMadrid->LC().'</h1></body></html>');
 $response->setStatusCode(200);
 $response->headers->set('Content-Type', 'text/html');
 
