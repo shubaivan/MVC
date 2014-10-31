@@ -3,7 +3,7 @@
 
 <head>
 <body>
-<h1><?php echo $b['show'] ?></h1>
+<h1><?php echo $r['show'] ?></h1>
 <ul>
 
 </ul>

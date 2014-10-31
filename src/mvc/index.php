@@ -13,12 +13,12 @@ use mvc\Controllers;
 use mvc\tim\Barcelona;
 use mvc\tim\RealMadrid;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+    use Symfony\Component\HttpFoundation\Response;
 
 
 
 
-$RealMadrid = new RealMadrid('Carlo Ancelotti','Santiago Bernabeu','Casillas');
+/*$RealMadrid = new RealMadrid('Carlo Ancelotti','Santiago Bernabeu','Casillas');
 echo $RealMadrid->show().'<br>';
 echo ' Champions League - '. $RealMadrid->LC().'<br>';
 
@@ -53,9 +53,10 @@ $path = $request->getPathInfo(); // запрошенный URL
 if (in_array($path, array(['', '/']))) {
 $response = new Response('Welcome to the homepage.');
 } elseif ($path == '/barcelona') {
-    $response = new Controllers();
-    $response->action_barcelona();
-} else {
+    $response = Controllers::barcelonaAction();
+} elseif ($path == '/real') {
+    $response = Controllers::realAction();
+}  else {
     $response = new Response('Page not found.', 404);
 }
 $response->send();

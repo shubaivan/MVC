@@ -8,12 +8,24 @@
 namespace mvc;
 
 use mvc\tim\Barcelona;
+use mvc\tim\RealMadrid;
 
 class Model
 {
     public function getBarcelonaParametrs()
     {
         $Barcelona = new Barcelona('Luis Enrique', 'Camp Nou', 'Xavier ');
-        $Barcelona->show() . '<br>';
+
+        $b['show'] = $Barcelona->show();
+        return $b;
+
+    }
+    public function getRealParametrs()
+    {
+        $Real = new RealMadrid('Carlo Ancelotti','Santiago Bernabeu','Casillas');
+
+        $r['show'] = $Real->show();
+        return $r;
+
     }
 }
