@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class Controllers
 {
-    function barcelonaAction()
+    public  function barcelonaAction()
     {
 
         $b = Model::getBarcelonaParametrs();
@@ -26,7 +26,7 @@ class Controllers
 
     }
 
-    function realAction()
+    public  function realAction()
     {
 
         $r = Model::getRealParametrs();

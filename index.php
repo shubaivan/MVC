@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ivan
- * Date: 30.10.14
- * Time: 12:03
- */
-namespace mvc;
 
-require_once '../../vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 use mvc\Controllers;
 use mvc\tim\Barcelona;
@@ -22,7 +15,7 @@ use Phroute\Dispatcher;
 
 $request = Request::createFromGlobals();
 
-$loader = new Twig_Loader_Filesystem(__DIR__ . '/app/views');
+$loader = new Twig_Loader_Filesystem(__DIR__.'/app/views');
 $twig = new Twig_Environment($loader);
 
 
